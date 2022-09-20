@@ -70,12 +70,13 @@ class PPO:
             _advantages.reverse()
             _advantages = _advantages[:-1] # No tener en cuenta el 0 inicial
             _advantages = torch.tensor(_advantages).float().unsqueeze(1).to(self.critic.device)
+            _returns = _advantages + _values
             # Se suma una pequeña constante para evitar errores en la división
             # Advantage scaling - Revisiting Design Choices in Proximal Policy Optimization
             # https://arxiv.org/abs/2009.10897
             _advantages = (_advantages - _advantages.mean()) / (_advantages.std() + _small_constant)
 
-        return _advantages, _advantages + _values
+        return _advantages, _returns
 
     def learn(self):
         # Obtención de toda la memoria para calcular GAE

@@ -59,8 +59,8 @@ if __name__ == "__main__":
 
             # Solo se aprende tras transcurrir X pasos
             if _trajectory_length % STEPS_FOR_LEARNING == 0:
-                _ppo.learn()
                 _trajectory_length = 0
+                _ppo.learn()
 
             # Actualizamos la observación anterior
             _observation = _next_observation
