@@ -1,5 +1,7 @@
+# EN PROGRESO, ACTUALIZANDOSE
+
 # Aprendizaje por refuerzo aplicado a un entorno simulado de asistencia robótica
-Repositorio para el contenido relativo al trabajo de fin de máster desarrollado en el Máster de Inteligencia Artificial de la Universidad Internacional de La Rioja (UNIR).
+Repositorio para el contenido relativo al trabajo de fin de máster desarrollado en el Máster de Inteligencia Artificial de la Universidad Internacional de La Rioja (UNIR). (2022)
 
 # Resumen
 
@@ -7,8 +9,11 @@ El aprendizaje por refuerzo es un subconjunto del aprendizaje automático que co
 
 # Referencias
 
-- Artículo de referencia principal: https://arxiv.org/abs/1910.04700 (Assistive Gym: A Physics Simulation Framework for Assistive Robotics)
+- **Artículo de referencia principal**: https://arxiv.org/abs/1910.04700 (Assistive Gym: A Physics Simulation Framework for Assistive Robotics)
 - Github: https://github.com/Healthcare-Robotics/assistive-gym
-- Phil Tabor: Gracias a Phil Tabor por su excelente labor creando la plataforma NeuralNet.AI (https://www.neuralnet.ai/) en la cual se pueden aprender conceptos avanzados de una forma sencilla. Totalmente recomendable. En concreto, su implementación de PPO me ha servido de gran ayuda para guiarme en la compresión e implementación de este (https://github.com/philtabor/Advanced-Actor-Critic-Methods/tree/main/PPO/single/continuous). También tiene una sección muy útil dedicada a DDPG y TD3.
-- Frogames: Esta plataforma creada por Juan Gabriel Gomila (https://frogames.es/) es un recurso excelente para aprender acerca de diversos temas de Inteligencia Artificial, Ciencia de Datos e incluso matemáticas. En concreto, tiene una sección donde se profundiza en la compresión e implementación de TD3 que me ha sido de gran utilidad.
-- Lazy Programmer: En esta web (https://lazyprogrammer.me/) se ofrece el acceso a cursos de pago de gran calidad sobre diversos temas del Machine Learning, Deep Learning y Reinforcement Learning. En concreto estos últimos han sido de gran utilidad para el desarrollo del trabajo de fin de máster.
+- **Phil Tabor**: Gracias a Phil Tabor por su excelente labor creando la plataforma NeuralNet.AI (https://www.neuralnet.ai/) en la cual se pueden aprender conceptos avanzados de una forma sencilla. Totalmente recomendable. En concreto, su implementación de PPO me ha servido de gran ayuda para guiarme en la compresión e implementación de este (https://github.com/philtabor/Advanced-Actor-Critic-Methods/tree/main/PPO/single/continuous). También tiene una sección muy útil dedicada a DDPG y TD3.
+- **Frogames**: Esta plataforma creada por Juan Gabriel Gomila (https://frogames.es/) es un recurso excelente para aprender acerca de diversos temas de Inteligencia Artificial, Ciencia de Datos e incluso Matemáticas. En concreto, tiene una sección donde se profundiza en la compresión e implementación de TD3 que me ha sido de gran utilidad.
+- **Lazy Programmer**: En esta web (https://lazyprogrammer.me/) se ofrece el acceso a cursos de pago de gran calidad sobre diversos temas del Machine Learning, Deep Learning y Reinforcement Learning. En concreto estos últimos han sido de gran utilidad para el desarrollo del trabajo de fin de máster.
+- **David Silver**: El curso de Reinforcement Learning de David Silver constituye un punto excelente de partida para adquirir una buena base en la comprensión del aprendizaje por refuerzo. (https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ)
+- **Udacity Deep Reinforcement Learning Nanodegree**: En este nanodegree de Udacity (https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) se explican los fundamentos y se ponen en marcha varios proyectos que permiten comprender conceptos complejos desde una perspectiva más práctica.
+- **Introducción al Aprendizaje por Refuerzo**: Este libro de Torres (https://torres.ai/aprendizaje-por-refuerzo/) es uno de los mejores recursos escritos en castellano para aprender los fundamentos del Aprendizaje por Refuerzo.
