@@ -11,7 +11,7 @@ El aprendizaje por refuerzo es un subconjunto del aprendizaje automático que co
 - **TD3**: Implementación del algoritmo de TD3 (ver [#Referencias](https://github.com/escribano89/unir_tfm_reinforcement_learning/blob/main/README.md#referencias))
 - Archivo **plotting.ipynb**: Archivo de [Google Collab](https://colab.research.google.com/) empleado para generar las gráficas. Este require de adaptación en base a los archivos que se van a comparar. Hay que cambiar el nombre del csv empleado y modificar los label a mostrar en la gráfica.
 - Carpeta **Data**: En esta carpeta esta la información de los experimentos más importantes llevados a cabo en el proyecto. Se detalla en la siguiente sección.
-- **requirements.txt**: Dependencias instaladas en nuestro entorno local
+- **requirements.txt**: Dependencias instaladas durante el desarrollo del TFM.
 
 # Carpeta de Data
 
