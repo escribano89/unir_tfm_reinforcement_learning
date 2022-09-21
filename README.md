@@ -38,8 +38,8 @@ En la carpeta de **data** se encuentran los experimentos realizados, por lo que 
 
 - Bed Bathing
 - [Feeding](https://www.youtube.com/watch?v=Y1Fe0Z5vt5A)
-- Itch I
-- Itch II
+- [Itch I](https://www.youtube.com/watch?v=QmF8oj_QJhU)
+- [Itch II](https://www.youtube.com/watch?v=Q6aMOGWsroE&feature=youtu.be)
 
 # Referencias
 
