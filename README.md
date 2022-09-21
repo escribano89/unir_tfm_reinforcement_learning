@@ -24,6 +24,13 @@ Esta carpeta está estructurada en 3 subcarpetas principales:
 - **verification_itch**: En esta carpeta están los datos relativos a la verificación de la implementación de los dos algoritmos seleccionados, así como las baselines empleadas.
 
 
+# Videos de Ejemplo
+
+- Bed Bathing
+- Feeding
+- Itch I
+- Itch II
+
 # Referencias
 
 - **Artículo de referencia principal**: https://arxiv.org/abs/1910.04700 (Assistive Gym: A Physics Simulation Framework for Assistive Robotics)
