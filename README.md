@@ -36,7 +36,7 @@ En la carpeta de **data** se encuentran los experimentos realizados, por lo que 
 
 # Videos de Ejemplo
 
-- Bed Bathing
+- [Bed Bathing](https://www.youtube.com/watch?v=vXMuxoFqH5g)
 - [Feeding](https://www.youtube.com/watch?v=Y1Fe0Z5vt5A)
 - [Itch I](https://www.youtube.com/watch?v=QmF8oj_QJhU)
 - [Itch II](https://www.youtube.com/watch?v=Q6aMOGWsroE&feature=youtu.be)
