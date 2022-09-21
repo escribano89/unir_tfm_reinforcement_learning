@@ -13,15 +13,15 @@ El aprendizaje por refuerzo es un subconjunto del aprendizaje automático que co
 - **TD3**: Implementación del algoritmo de TD3 (ver [#Referencias](https://github.com/escribano89/unir_tfm_reinforcement_learning/blob/main/README.md#referencias))
 - Archivo **plotting.ipynb**: Archivo de [Google Collab](https://colab.research.google.com/) empleado para generar las gráficas. Este require de adaptación en base a los archivos que se van a comparar. Hay que cambiar el nombre del csv empleado y modificar los label a mostrar en la gráfica.
 - Carpeta **Data**: En esta carpeta esta la información de los experimentos más importantes llevados a cabo en el proyecto. Se detalla en la siguiente sección.
+- **requirements.txt**: Dependencias instaladas en nuestro entorno local
 
 # Carpeta de Data
 
 Esta carpeta está estructurada en 3 subcarpetas principales:
 
-- trainings: Esta carpeta contiene los entrenamientos y simulaciones mas relevantes llevados a cabo, tanto en TD3 como en PPO y las gráficas empleadas en la memoria. Esta carpeta se organiza en varios niveles: Algoritmo > Entorno > Robot. Para cada combinación se ha incluido la traza del entrenamiento en csv (training_steps*.csv), los resultados de la simulación (results.csv), los modelos generados para el actor y el crítico (models) y una serie de simulaciones destacadas obtenidas tras aplicar el modelo en el entorno (animated_pngs).
-- videos: En esta carpeta hay varios videos que muestran algunas de las simulaciones más exitosas para cada tarea.
-- verification_itch: En esta carpeta están los datos relativos a la verificación de la implementación de los dos algoritmos seleccionados, así como las baselines empleadas.
-
+- **trainings**: Esta carpeta contiene los entrenamientos y simulaciones mas relevantes llevados a cabo, tanto en TD3 como en PPO y las gráficas empleadas en la memoria. Esta carpeta se organiza en varios niveles: Algoritmo > Entorno > Robot. Para cada combinación se ha incluido la traza del entrenamiento en csv (training_steps*.csv), los resultados de la simulación (results.csv), los modelos generados para el actor y el crítico (models) y una serie de simulaciones destacadas obtenidas tras aplicar el modelo en el entorno (animated_pngs).
+- **videos**: En esta carpeta hay varios videos que muestran algunas de las simulaciones más exitosas para cada tarea.
+- **verification_itch**: En esta carpeta están los datos relativos a la verificación de la implementación de los dos algoritmos seleccionados, así como las baselines empleadas.
 
 
 # Referencias
