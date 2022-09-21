@@ -26,11 +26,11 @@ Esta carpeta está estructurada en 3 subcarpetas principales:
 
 Para poder reproducir un experimento dado, hay que seguir los siguientes pasos:
 
-- Primero, hay que seleccionar el algoritmo deseado y modificar el archivo de config.py para incluir los hiperparámetros deseados y el entorno objetivo.
-- Después se ejecuta el archivo train.py. Este muestra una traza de la evolución del entrenamiento. Al finalizar, se generan los modelos para el actor y el crítico y se exporta un archivo (training_steps.csv) con la evolución del entrenamiento.
-- En este punto, se puede verificar la evolución del entrenamiento mediante el archivo plotting.py de la carpeta principal y ajustándolo para adecuarlo a la comparativa que se desee realizar.
-- Para ejecutar una simulación en el entorno en el que se ha entrenado el agente (robot), en la carpeta inferences están los archivos que deben ejecutarse para realizar la simulación. Para ello, seleccionar el adecuado y modificar la variable que contiene el entorno a ejecutar.
-- Al terminar la simulación, se genera una carpeta "rollout" en la que se incluyen las simulaciones más destacadas así como los resultados obtenidos en las 100 iteraciones.
+- Primero, hay que seleccionar el algoritmo deseado (carpeta TD3 o PPO) y modificar el archivo de *config.py* para incluir los hiperparámetros deseados y el entorno objetivo.
+- Después se ejecuta el archivo *train.py*. Este muestra una traza de la evolución del entrenamiento. Al finalizar, se generan los modelos para el actor (fichero actor) y el crítico (fichero critic) y se exporta un archivo (*training_steps.csv*) con la evolución del entrenamiento.
+- En este punto, se puede verificar la evolución del entrenamiento mediante el archivo *plotting.py* de la carpeta principal y ajustándolo para adecuarlo a la comparativa que se desee realizar.
+- Para ejecutar una simulación en el entorno en el que se ha entrenado el agente (robot), en la carpeta *inferences* están los archivos que deben ejecutarse para realizar la simulación. Para ello, seleccionar el adecuado y modificar la variable que contiene el entorno a ejecutar.
+- Al terminar la simulación, se genera una carpeta *rollout* en la que se incluyen las simulaciones más destacadas así como los resultados obtenidos en las 100 iteraciones.
 
 # Videos de Ejemplo
 
