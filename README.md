@@ -51,3 +51,7 @@ En la carpeta de **data** se encuentran los experimentos realizados, por lo que 
 - **David Silver**: El curso de Reinforcement Learning de David Silver constituye un punto excelente de partida para adquirir una buena base en la comprensión del aprendizaje por refuerzo. (https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ)
 - **Udacity Deep Reinforcement Learning Nanodegree**: En este nanodegree de Udacity (https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) se explican los fundamentos y se ponen en marcha varios proyectos que permiten comprender conceptos complejos desde una perspectiva más práctica.
 - **Introducción al Aprendizaje por Refuerzo**: Este libro de Torres (https://torres.ai/aprendizaje-por-refuerzo/) es uno de los mejores recursos escritos en castellano para aprender los fundamentos del Aprendizaje por Refuerzo.
+
+# ¿Dudas? ¿Problemas?
+
+Si tienes alguna duda o has encontrado algún problema, por favor crea una incidencia en la sección de Issues. Gracias! :)
