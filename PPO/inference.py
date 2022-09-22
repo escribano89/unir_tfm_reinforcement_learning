@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
         # Se itera mientras no haya finalizado el episodio
         while not _done:
-            _action, _probability = _ppo.select_action(_observation)
+            _action, _ = _ppo.select_action(_observation)
             # Ajuste de la acción debido a la distribución Beta empleada
             _adapted_action = beta_dist_action(_action, _max_action)
             _next_observation, _reward, _done, _info = _env.step(_adapted_action)
@@ -67,9 +67,6 @@ if __name__ == "__main__":
             _score += _reward
             _total_steps += 1
             _trajectory_length += 1
-
-            # Añadimos la experiencia obtenida en la memoria
-            _ppo.add_to_memory(_observation, _next_observation, _action, _probability, _reward, _done)
 
             # Guardamos la recompensa obtenida
             _rollout_rewards.append(_reward)
