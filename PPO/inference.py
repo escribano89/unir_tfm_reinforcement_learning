@@ -19,6 +19,10 @@ if __name__ == "__main__":
     _env = gym.make(ENV_NAME)
     # Configuración de la semilla aleatoria
     _env.set_seed(random.randint(1, 200))
+    
+    # Configuración de la cámara
+    _env.setup_camera(camera_eye=[0.5, -0.75, 1.5], camera_target=[-0.2, 0, 0.75],
+                     fov=60, camera_width=1920//4, camera_height=1080//4)
 
     # Información del csv en el que se guardará el proceso de aprendizaje
     _csv_info = ["step", "reward", "episode", "success"]
@@ -55,6 +59,10 @@ if __name__ == "__main__":
             # Ajuste de la acción debido a la distribución Beta empleada
             _adapted_action = beta_dist_action(_action, _max_action)
             _next_observation, _reward, _done, _info = _env.step(_adapted_action)
+
+            # Obtención del frame actual
+            _img, depth = _env.get_camera_image_depth()
+            _frames.append(_img)
 
             _score += _reward
             _total_steps += 1
@@ -94,6 +102,7 @@ if __name__ == "__main__":
         if _rollout_success:
             _all_success += 1
 
+        # Guardamos un png animado para las simulaciones más destacadas
         if np.sum(_rollout_rewards) < _worst_reward:
             _worst_reward = np.sum(_rollout_rewards)
             write_apng(f'rollout/worst_output_{_episode}.png', _frames, delay=100)
