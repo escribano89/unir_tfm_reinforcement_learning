@@ -5,8 +5,8 @@ import random
 import assistive_gym
 import gym
 import numpy as np
-
-from config import ENV_NAME, MAX_STEPS, STEPS_FOR_LEARNING
+from numpngw import write_apng
+from config import ENV_NAME, MAX_STEPS
 from ppo import PPO
 
 
@@ -29,19 +29,25 @@ if __name__ == "__main__":
 
     # Inicialización del agente PPO
     _ppo = PPO(number_of_actions=_env.action_space.shape[0], input_dimensions=_env.observation_space.shape)
-    
+    _ppo.load_actor_critic()
+
     # Variables para el seguimiento del aprendizaje
     _reward_history = []
-
     _total_steps = 0
     _trajectory_length = 0
+    _all_success = 0
     _episode = 1
     _steps = 0
+    best_reward = 0
+    worst_reward = 0
 
     while _total_steps < MAX_STEPS:
         _observation = _env.reset()
+        _frames = []
         _done = False
         _score = 0
+        _rollout_rewards = []
+        _rollout_success = False
 
         # Se itera mientras no haya finalizado el episodio
         while not _done:
@@ -57,10 +63,8 @@ if __name__ == "__main__":
             # Añadimos la experiencia obtenida en la memoria
             _ppo.add_to_memory(_observation, _next_observation, _action, _probability, _reward, _done)
 
-            # Solo se aprende tras transcurrir X pasos
-            if _trajectory_length % STEPS_FOR_LEARNING == 0:
-                _trajectory_length = 0
-                _ppo.learn()
+            # Guardamos la recompensa obtenida
+            _rollout_rewards.append(_reward)
 
             # Actualizamos la observación anterior
             _observation = _next_observation
@@ -73,6 +77,9 @@ if __name__ == "__main__":
 				"episode": _episode,
 				"success": _info.get("task_success") # Esto corresponde con la columna "success" del estudio
 			})
+            if _done:
+                _rollout_success = _info.get("task_success")
+
             _steps = _steps + 1
 
         # Actualizamos el histórico de resultados
@@ -84,14 +91,27 @@ if __name__ == "__main__":
         )
         _episode += 1
 
+        if _rollout_success:
+            _all_success += 1
+
+        if np.sum(_rollout_rewards) < worst_reward:
+            _worst_reward = np.sum(_rollout_rewards)
+            write_apng(f'rollout/worst_output_{_episode}.png', _frames, delay=100)
+
+        if np.sum(_rollout_rewards) > best_reward:
+            _best_reward = np.sum(_rollout_rewards)
+            write_apng(f'rollout/best_output_{_episode}.png', _frames, delay=100)
+
     # Desconexión del entorno de Assistive Gym
     _env.disconnect()
 
-    # Una vez ha finalizado el proceso de entrenamiento, se guardan
-    # los modelos y los resultados en un csv
-    _ppo.save_actor_critic()
-
-    with open("training_steps.csv", "w") as csvfile:
+    # Generación del archivo csv con los resultados obtenidos
+    with open(f'rollout/results.csv', 'w') as csvfile:                 
         writer = csv.DictWriter(csvfile, fieldnames = _csv_info)
-        writer.writeheader()
+        writer.writeheader()        
         writer.writerows(_csv_dict_list)
+
+    print("AVG REWARDS: ", np.mean(_reward_history))
+    print("AVG STD: ", np.std(_reward_history))
+    print("SUCCESS: ", f"{_all_success}%")
+
