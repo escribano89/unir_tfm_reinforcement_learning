@@ -61,7 +61,7 @@ if __name__ == "__main__":
             _next_observation, _reward, _done, _info = _env.step(_adapted_action)
 
             # Obtención del frame actual
-            _img, depth = _env.get_camera_image_depth()
+            _img, _ = _env.get_camera_image_depth()
             _frames.append(_img)
 
             _score += _reward
