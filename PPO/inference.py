@@ -94,11 +94,11 @@ if __name__ == "__main__":
         if _rollout_success:
             _all_success += 1
 
-        if np.sum(_rollout_rewards) < worst_reward:
+        if np.sum(_rollout_rewards) < _worst_reward:
             _worst_reward = np.sum(_rollout_rewards)
             write_apng(f'rollout/worst_output_{_episode}.png', _frames, delay=100)
 
-        if np.sum(_rollout_rewards) > best_reward:
+        if np.sum(_rollout_rewards) > _best_reward:
             _best_reward = np.sum(_rollout_rewards)
             write_apng(f'rollout/best_output_{_episode}.png', _frames, delay=100)
 
