@@ -18,7 +18,6 @@ El aprendizaje por refuerzo es un subconjunto del aprendizaje automático que co
 Esta carpeta está estructurada en 3 subcarpetas principales:
 
 - **trainings**: Esta carpeta contiene los entrenamientos y simulaciones mas relevantes llevados a cabo, tanto en TD3 como en PPO y las gráficas empleadas en la memoria. Esta carpeta se organiza en varios niveles: Algoritmo > Entorno > Robot. Para cada combinación se ha incluido la traza del entrenamiento en csv (training_steps*.csv), los resultados de la simulación (results.csv), los modelos generados para el actor y el crítico (models) y una serie de simulaciones destacadas obtenidas tras aplicar el modelo en el entorno (animated_pngs).
-- **inferences**: En esta carpeta están los archivos necesarios para ejecutar las simulaciones una vez se ha entrenado un modelo.
 - **videos**: En esta carpeta hay varios videos que muestran algunas de las simulaciones más exitosas para cada tarea.
 - **verification_itch**: En esta carpeta están los datos relativos a la verificación de la implementación de los dos algoritmos seleccionados, así como las baselines empleadas.
 
@@ -29,7 +28,7 @@ Para poder reproducir un experimento dado, hay que seguir los siguientes pasos:
 1. Primero, hay que seleccionar el algoritmo deseado (carpeta TD3 o PPO) y modificar el archivo de *config.py* para incluir los hiperparámetros deseados y el entorno objetivo.
 2. Después se ejecuta el archivo *train.py*. Este muestra una traza de la evolución del entrenamiento. Al finalizar, se generan los modelos para el actor (fichero actor) y el crítico (fichero critic) y se exporta un archivo (*training_steps.csv*) con la evolución del entrenamiento.
 3. En este punto, se puede verificar la evolución del entrenamiento mediante el archivo *plotting.py* de la carpeta principal y ajustándolo para adecuarlo a la comparativa que se desee realizar.
-4. Para ejecutar una simulación en el entorno en el que se ha entrenado el agente (robot), en la carpeta *inferences* están los archivos que deben ejecutarse para realizar la simulación. Para ello, seleccionar el adecuado y modificar la variable que contiene el entorno a ejecutar.
+4. Para ejecutar una simulación en el entorno en el que se ha entrenado el agente (robot), se ejecuta el archivo *inference.py* que procederá a ejecutar las 100 simulaciones.
 5. Al terminar la simulación, se genera una carpeta *rollout* en la que se incluyen las simulaciones más destacadas así como los resultados obtenidos en las 100 iteraciones.
 
 En la carpeta de **data** se encuentran los experimentos realizados, por lo que se pueden usar los archivos generados para replicar cualquier punto de los descritos con anterioridad.
