@@ -5,6 +5,8 @@ Repositorio para el contenido relativo al trabajo de fin de máster desarrollado
 
 El aprendizaje por refuerzo es un subconjunto del aprendizaje automático que consiguió un hito muy importante en 2017 cuando Google Deep Mind desarrolló un programa basado en aprendizaje por refuerzo que venció a un jugador profesional del juego de mesa Go ( https://www.deepmind.com/research/highlighted-research/alphago ). Esta forma de aprender mediante la interacción con el entorno constituye un punto de entrada muy interesante para desarrollar robots que puedan asistir a personas con movilidad reducida, de forma que, en el futuro, mejoren la calidad de vida. Por este propósito, se desarrolla un estudio sobre un entorno de asistencia robótica asistida virtual ( https://arxiv.org/abs/1910.04700 ) mediante la aplicación de dos algoritmos de aprendizaje por refuerzo profundo. Estos ejecutan pequeñas tareas necesarias para una persona con problemas de movilidad, tales como rascar una picazón, limpiar un brazo de una persona tumbada o dar de comer, siempre respetando las preferencias de un humano a la hora recibir tal asistencia.
 
+![rl-env](https://github.com/escribano89/unir_tfm_reinforcement_learning/blob/main/data/verification_itch/best_td3_model/animated_pngs/best_output_62.png)
+
 # Estructura
 
 - **PPO**: Implementación del algoritmo de PPO (ver [#Referencias](https://github.com/escribano89/unir_tfm_reinforcement_learning/blob/main/README.md#referencias))
